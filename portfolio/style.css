@@ -158,6 +158,7 @@ nav ul li a:hover::after {
     display: flex;
     justify-content: center;
     gap: 10px;
+    
 }
 
 .about-content {
