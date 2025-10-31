@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+    <header >
+        <div class="logo">
+            My Portfolio
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#banner">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#skills">Skill</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <!--     ********* banner section ********* -->
+    <div class="banner"id="banner">
+        <div class="banner-content">
+            <h1>Hi! I'am Dhiraj Rathwa</h1>
+            <h3>Web & Software Developer</h3>
+            <p>I create modernand responsive website usin HTML,CSS,JAVASCRIPT with various framework.</p>
+            <button> <a href="#contact">Contact Me</a> </button>
+        </div>
+        <div class="banner-image">
+            <img src="images/profile .jpg" alt="image not found">
+        </div>
+    </div>
+
+    <!--     ********* about section ********* -->
+    <section id="about">
+        <div class="about">
+            <div class="about-content">
+        <h2 class="section-title">About Me</h2>
+                <p>
+                    I'm Dhiraj Rathwa, a passionate frontend developer dedicated to crafting modern, responsive, and
+                    user-friendly web experiences. With a strong foundation in HTML, CSS, and JavaScript, I specialize
+                    in turning ideas into interactive interfaces that blend functionality with visual appeal.
+                </p>
+                <p>
+                    Whether it's building sleek landing pages, dynamic web apps, or integrating frameworks like React or
+                    Bootstrap, I focus on clean code, performance, and pixel-perfect design. I thrive on solving
+                    real-world problems through intuitive UI and seamless UX.
+                </p>
+                <p>
+                    My goal is to deliver websites that not only look great but also perform flawlessly across devices.
+                    Let's build something amazing together.
+                </p>
+            </div>
+            <div class="about-image">
+                <img src="images/about section.jpg" alt="">
+
+            </div>
+        </div>
+    </section>
+
+        <!--     ********* Eductaion section ********* -->
+
+    <section id="education">
+        <h2 class="section-title">Education</h2>
+        <div class="education-container">
+
+            <div class="education-box">
+                <div class="year">2025 - Present</div>
+                <h3>Bachelor of Vocational</h3>
+                <p>Kavayatri Bahinabaiin  Chaudhari North Maharashtra University</p>
+                <span>Currently passout In B.VOC(Software Development) with CGPA. 9.24.</span>
+            </div>
+
+            <div class="education-box">
+                <div class="year">2021 - 2022</div>
+                <h3>Higher Secondary School</h3>
+                <p>SSVPS science college ,Dhule</p>
+                <span>Completed 12th with 63.67% aggregate in Science stream.</span>
+            </div>
+
+            <div class="education-box">
+                <div class="year">2019 - 2020</div>
+                <h3>Secondary School</h3>
+                <p>Holy child nglish High School</p>
+                <span>Completed 10th with 73.60% aggregate under Maharashtra board.</span>
+            </div>
+
+        </div>
+    </section>
+    <!--     ********* Sills section ********* -->
+
+    <section id="skills">
+  <h2 class="section-title">Skills</h2>
+
+  <div class="skills-container">
+
+    <div class="skill-box">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML Logo">
+      <h3>HTML5</h3>
+      <p>Structure and organize web pages with semantic HTML.</p>
+    </div>
+
+    <div class="skill-box">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS Logo">
+      <h3>CSS3</h3>
+      <p>Create responsive layouts and stylish designs using modern CSS.</p>
+    </div>
+
+    <div class="skill-box">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript Logo">
+      <h3>JavaScript</h3>
+      <p>Build interactive web pages and dynamic features with JS.</p>
+    </div>
+
+    <div class="skill-box">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React Logo">
+      <h3>React</h3>
+      <p>Develop fast, reusable UI components with React JS.</p>
+    </div>
+
+    <div class="skill-box">
+       <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap Logo">
+      <h3>Bootstrap</h3>
+      <p>Design fast, responsive layouts using Bootstrap framework.</p>
+    </div>
+    
+    <div class="skill-box">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git Logo">
+      <h3>Git & GitHub</h3>
+      <p>Version control and collaboration with Git and GitHub.</p>
+    </div>
+
+  </div>
+</section>
+
+<!--  ********** Contact section ********* -->
+  <section id="contact">
+  <h2 class="section-title">Contact Me</h2>
+
+  <div class="contact-container">
+    <form id="contactForm" novalidate>
+      <div class="form-group">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" placeholder="Enter your name" required>
+        <small class="error-msg"></small>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" placeholder="Enter your email" required>
+        <small class="error-msg"></small>
+      </div>
+
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" rows="5" placeholder="Type your message..." required></textarea>
+        <small class="error-msg"></small>
+      </div>
+
+      <button type="submit" class="btn-submit">Send Message</button>
+      <p id="successMsg"></p>
+    </form>
+  </div>
+</section>
+
+    <!--     ********* Footer section ********* -->
+<footer id="footer">
+  <div class="footer-container">
+
+    <h3 class="footer-name">Dhiraj V. Rathwa</h3>
+    <p class="footer-text">Frontend & Web Developer</p>
+
+    <div class="social-icons">
+      <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="https://github.com" target="_blank" aria-label="GitHub">
+        <i class="fab fa-github"></i>
+      </a>
+      <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </div>
+
+    <p class="footer-copy">&copy; 2025 Dhiraj .V. Rathwa | All Rights Reserved.</p>
+
+  </div>
+</footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
