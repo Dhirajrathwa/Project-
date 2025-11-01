@@ -481,8 +481,12 @@ input:focus, textarea:focus {
     .about-image {
         width: 100%;
         height: 100%;
+        margin-top: 10px;
     }
-
+    .about-image img{
+        width: 100%;
+        height: 100%;
+    }
     .education-box {
         padding: 1rem;
     }
