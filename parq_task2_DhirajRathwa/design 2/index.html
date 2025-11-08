@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+</head>
+<body>
+  <header>
+    <div class="logo">
+      Career page
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#career-hero">Home</a></li>
+        <li><a href="#culture">Company Culture</a> </li>
+        <li><a href="#search">Search</a></li>
+        <li><a href="#jobs">Jobs</a></li>
+        <li><a href="#application-form">Apply</a></li>
+
+      </ul>
+    </nav>
+  </header>
+    <!-- ===== CAREER HERO SECTION ===== -->
+<section class="career-hero" id="career-hero">
+  <div class="career-container">
+
+    <!-- LEFT CONTENT -->
+    <div class="career-left" data-aos="fade-right">
+      <h1>Find Your Career.<br>You Deserve it.</h1>
+      <p>Each month, more than <strong>7 million professionals</strong> turn to our platform in their search for work, making over <strong>160,000 applications</strong> every day.</p>
+      
+      <div class="career-socials">
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="#"><i class="fab fa-google"></i></a>
+      </div>
+    </div>
+
+    <!-- RIGHT IMAGES -->
+    <div class="career-right" data-aos="fade-left">
+      <div class="image-grid">
+        <div class="img-box tall">
+          <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=600&q=80" alt="team meeting">
+        </div>
+        <div class="img-box">
+          <img src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?auto=format&fit=crop&w=600&q=80" alt="woman thinking">
+        </div>
+        <div class="img-box wide">
+          <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=80" alt="team discussion">
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+<!-- company culture section -->
+<section class="company-culture" data-aos="fade-up" id="culture">
+  <h2>Our Company Culture</h2>
+  <p>We believe in fostering a positive and inclusive work environment where everyone feels valued and empowered to contribute their best.</p>
+    <div class="culture-cards">
+        <div class="culture-card">
+        <i class="fas fa-hands-helping"></i>
+        <h3>Collaboration</h3>
+        <p>We work together to achieve common goals and support each other.</p>
+        </div>
+        <div class="culture-card">
+        <i class="fas fa-chalkboard-teacher"></i>
+        <h3>Continuous Learning</h3>
+        <p>We encourage growth and development through ongoing learning opportunities.</p>
+        </div>
+        <div class="culture-card">
+        <i class="fas fa-globe"></i>
+        <h3>Diversity & Inclusion</h3>
+        <p>We celebrate diverse perspectives and create an inclusive workplace for all.</p>
+        </div>
+</section>
+
+ <!-- Job Filter Section -->
+<section class="job-filter" data-aos="fa ide-up" id="search">
+  <h2>Find Your Perfect Role</h2>
+  <div class="filter-bar">
+    <input type="text" id="searchInput" placeholder="Search jobs by title or location..." oninput="filterJobs()">
+
+    <select id="locationFilter" onchange="filterJobs()">
+      <option value="">All Locations</option>
+      <option value="Remote">Remote</option>
+      <option value="Bangalore, India">Bangalore, India</option>
+      <option value="Ahmedabad, India">Ahmedabad, India</option>
+    </select>
+
+    <select id="typeFilter" onchange="filterJobs()">
+      <option value="">All Types</option>
+      <option value="Full-time">Full-time</option>
+      <option value="Part-time">Part-time</option>
+      <option value="Internship">Internship</option>
+    </select>
+  </div>
+  <ul id="suggestions" class="suggestions"></ul>
+</section>
+<!-- JOB LISTINGS SECTION -->
+
+    <section id="jobs" class="jobs">
+      <h2>Current Openings</h2>
+      <div class="job-list">
+        <!-- develope flex card with search -->
+        <div class="job-card" data-title="Software Engineer" data-location="Remote" data-type="Full-time">
+          <h3>Software Engineer</h3>
+          <p>Location: Remote</p>
+          <p>Type: Full-time</p>
+          <button onclick="applyNow('Software Engineer', 'Remote', 'Full-time')">Apply now</button>
+        </div>
+
+     <!-- 1 --><div class="job-card" data-title="Software Engineer" data-location="Remote" data-type="Full-time">
+        <h3>Software Engineer</h3>
+        <p>Location: Remote</p>
+        <p>Type: Full-time</p>
+        <button onclick="applyNow('Software Engineer', 'Remote', 'Full-time')">Apply now</button>
+      </div>
+
+      <!-- 2 --><div class="job-card" data-title="Product Manager" data-location="Bangalore, India" data-type="Full-time">
+        <h3>Product Manager</h3>
+        <p>Location: Bangalore, India</p>
+        <p>Type: Full-time</p>
+        <button onclick="applyNow('Product Manager', 'Bangalore, India', 'Full-time')">Apply now</button>
+      </div>
+
+      <!-- 3 --><div class="job-card" data-title="UX Designer" data-location="Ahmedabad, India" data-type="Part-time">
+        <h3>UX Designer</h3>
+        <p>Location: Ahmedabad, India</p>
+        <p>Type: Part-time</p>
+        <button onclick="applyNow('UX Designer', 'Ahmedabad, India', 'Part-time')">Apply now</button>
+      </div>
+
+      <!-- 4 --><div class="job-card" data-title="Data Scientist" data-location="Remote" data-type="Internship">
+        <h3>Data Scientist</h3>
+        <p>Location: Remote</p>
+        <p>Type: Internship</p>
+        <button onclick="applyNow('Data Scientist', 'Remote', 'Internship')">Apply now</button>
+      </div>
+<!-- connect apply button to form -->
+      <div class="job-card" data-title="Marketing Specialist" data-location="Bangalore, India" data-type="Full-time">
+          <h3>Marketing Specialist</h3>
+          <p>Location: Bangalore, India</p>
+          <p>Type: Full-time</p>
+          <button onclick="applyNow('Marketing Specialist', 'Bangalore, India', 'Full-time')">Apply now</button>
+          </div>
+        </div>
+      </section>
+
+ <!-- make connection of job card apply button to form -->
+
+<section class="application-form" id="application-form" data-aos="fade-up">
+  <h2>Job Application</h2>
+  <form id="jobApplicationForm" onsubmit="submitApplication(event)">
+    <label for="jobTitle">Job Title:</label>
+    <input type="text" id="jobTitle" name="jobTitle" readonly>
+
+    <label for="jobRole">Preferred Role:</label>
+    <select id="jobRole" name="jobRole" required>
+        <option value="">Select a role</option>
+        <option value="Frontend Developer">Frontend Developer</option>
+        <option value="Backend Developer">Backend Developer</option>
+        <option value="Full Stack Developer">Full Stack Developer</option>
+        <option value="UI/UX Designer">UI/UX Designer</option>
+        <option value="Product Manager">Product Manager</option>
+        <option value="Data Scientist">Data Scientist</option>
+        <option value="DevOps Engineer">DevOps Engineer</option>
+        <option value="QA Engineer">QA Engineer</option>
+        <option value="Technical Writer">Technical Writer</option>
+    </select>
+
+    <label for="applicantName">Full Name:</label>
+    <input type="text" id="applicantName" name="applicantName" required>
+
+    <label for="applicantEmail">Email:</label>
+    <input type="email" id="applicantEmail" name="applicantEmail" required>
+
+    <label for="applicantResume">Resume:</label>
+    <input type="file" id="applicantResume" name="applicantResume" required>
+
+    <button type="submit">Submit Application</button>
+  </form>
+
+<!-- footer section -->
+  <footer>
+    <h4>Give quick start your career</h4>
+    <p>First step toward your career</p>
+    <button class="apply-btn" onclick="document.getElementById('application-form').scrollIntoView({ behavior: 'smooth' });">Apply Now</button>
+<div class="social-icon">
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-linkedin"></i></a>
+    <a href="#"><i class="fab fa-youtube"></i></a>
+    <a href="#"><i class="fab fa-google"></i></a>
+</div>
+  </footer>
+  
+<!-- script link -->
+<script src="script.js"></script>
+</body>
+</html>

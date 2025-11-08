@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <!-- AOS CSS -->
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+<!-- AOS JS -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+</head>
+<body>
+     <header>
+        <div class="logo">
+           Career Page
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#culture">Company Culture</a></li>
+                <li><a href="#search">Search Jobs</a></li>
+                <li><a href="#jobs">Jobs</a></li>
+                <li><a href="#apply">Apply</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <!--     ********* banner section ********* -->
+   <section class="hero" id="hero">
+  <div class="hero-content">
+    <h1>Join Our Amazing Team</h1>
+    <p>We’re building the future of digital innovation. Grow your career with us.</p>
+    <a href="#jobs" class="btn">Explore Open Roles</a>
+  </div>
+</section>
+
+<!--     ********* company culture & benefit section ********* -->
+<section class="culture" id="culture">
+  <div class="culture-container">
+    
+    <div class="culture-content" data-aos="fade-right">
+      <h2>Our Culture & Values</h2>
+      <p>We believe great things happen when creativity meets collaboration. 
+      At our company, innovation, learning, and respect are at the core of everything we do.</p>
+
+      <div class="culture-cards">
+        <div class="culture-card">
+          <i class="fas fa-users"></i>
+          <h3>Team Collaboration</h3>
+          <p>We work together, share ideas, and grow as one family.</p>
+        </div>
+        <div class="culture-card">
+          <i class="fas fa-lightbulb"></i>
+          <h3>Innovation First</h3>
+          <p>We encourage bold thinking and creative problem-solving every day.</p>
+        </div>
+        <div class="culture-card">
+          <i class="fas fa-heart"></i>
+          <h3>Work-Life Balance</h3>
+          <p>We value your well-being and support flexibility to stay healthy and happy.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="culture-image" data-aos="fade-left">
+      <img src="https://amclub.org.sg/wp-content/uploads/2024/06/singapore-work-culture-1-1024x683.jpg" alt="Company culture">
+    </div>
+
+  </div>
+</section>
+
+
+ 
+
+
+ <!-- Job Filter Section -->
+<section class="job-filter" data-aos="fade-up" id="search">
+  <h2>Find Your Perfect Role</h2>
+  <div class="filter-bar">
+    <input type="text" id="searchInput" placeholder="Search jobs by title or location..." oninput="filterJobs()">
+
+    <select id="locationFilter" onchange="filterJobs()">
+      <option value="">All Locations</option>
+      <option value="Remote">Remote</option>
+      <option value="Bangalore, India">Bangalore, India</option>
+      <option value="Ahmedabad, India">Ahmedabad, India</option>
+    </select>
+
+    <select id="typeFilter" onchange="filterJobs()">
+      <option value="">All Types</option>
+      <option value="Full-time">Full-time</option>
+      <option value="Part-time">Part-time</option>
+      <option value="Internship">Internship</option>
+    </select>
+  </div>
+  <ul id="suggestions" class="suggestions"></ul>
+</section>
+
+<!--     ********* jobs section ********* -->
+   <section id="jobs" class="jobs">
+  <h2>Current Openings</h2>
+  <div class="job-list">
+    
+    <!-- 1 -->
+    <div class="job-card" 
+         data-title="Frontend Developer"
+         data-location="Remote"
+         data-type="Full-time"
+         onclick="openJob('Frontend Developer')">
+      <h3>Frontend Developer</h3>
+      <p>Build responsive and interactive web applications using HTML, CSS, and JavaScript frameworks.</p>
+      <span class="location">Remote</span>
+    </div>
+
+    <!-- 2 -->
+    <div class="job-card" 
+         data-title="Backend Engineer"
+         data-location="Bangalore, India"
+         data-type="Full-time"
+         onclick="openJob('Backend Engineer')">
+      <h3>Backend Engineer</h3>
+      <p>Develop robust APIs, manage databases, and ensure high performance for all backend systems.</p>
+      <span class="location">Bangalore, India</span>
+    </div>
+
+    <!-- 3 -->
+    <div class="job-card"
+         data-title="UI/UX Designer"
+         data-location="Ahmedabad, India"
+         data-type="Internship"
+         onclick="openJob('UI/UX Designer')">
+      <h3>UI/UX Designer</h3>
+      <p>Design creative and intuitive user experiences for modern web and mobile applications.</p>
+      <span class="location">Ahmedabad, India</span>
+    </div>
+
+    <!-- 4 -->
+    <div class="job-card"
+         data-title="Project Manager"
+         data-location="Pune, India"
+         data-type="Full-time"
+         onclick="openJob('Project Manager')">
+      <h3>Project Manager</h3>
+      <p>Lead development teams, manage timelines, and ensure successful project delivery.</p>
+      <span class="location">Pune, India</span>
+    </div>
+
+    <!-- 5 -->
+    <div class="job-card"
+         data-title="QA Tester"
+         data-location="Remote"
+         data-type="Part-time"
+         onclick="openJob('QA Tester')">
+      <h3>QA Tester</h3>
+      <p>Test web and mobile applications, find bugs, and ensure top-notch quality across platforms.</p>
+      <span class="location">Remote</span>
+    </div>
+
+    <!-- 6 -->
+    <div class="job-card"
+         data-title="Digital Marketing Specialist"
+         data-location="Delhi, India"
+         data-type="Full-time"
+         onclick="openJob('Digital Marketing Specialist')">
+      <h3>Digital Marketing Specialist</h3>
+      <p>Plan and execute SEO, SEM, and social media strategies to boost online brand presence.</p>
+      <span class="location">Delhi, India</span>
+    </div>
+
+    <!-- 7 -->
+    <div class="job-card"
+         data-title="Content Writer"
+         data-location="Remote"
+         data-type="Part-time"
+         onclick="openJob('Content Writer')">
+      <h3>Content Writer</h3>
+      <p>Create engaging articles, blogs, and copy that reflect our company’s voice and tone.</p>
+      <span class="location">Remote</span>
+    </div>
+
+    <!-- 8 -->
+    <div class="job-card"
+         data-title="DevOps Engineer"
+         data-location="Hyderabad, India"
+         data-type="Full-time"
+         onclick="openJob('DevOps Engineer')">
+      <h3>DevOps Engineer</h3>
+      <p>Automate deployments, manage CI/CD pipelines, and maintain scalable cloud infrastructure.</p>
+      <span class="location">Hyderabad, India</span>
+    </div>
+
+    <!-- 9 -->
+    <div class="job-card"
+         data-title="Mobile App Developer"
+         data-location="Chennai, India"
+         data-type="Full-time"
+         onclick="openJob('Mobile App Developer')">
+      <h3>Mobile App Developer</h3>
+      <p>Build modern mobile apps using React Native or Flutter for iOS and Android platforms.</p>
+      <span class="location">Chennai, India</span>
+    </div>
+
+    <!-- 10 -->
+    <div class="job-card"
+         data-title="Graphic Designer"
+         data-location="Surat, India"
+         data-type="Internship"
+         onclick="openJob('Graphic Designer')">
+      <h3>Graphic Designer</h3>
+      <p>Design visuals for web, print, and social media to support branding and campaigns.</p>
+      <span class="location">Surat, India</span>
+    </div>
+
+    <!-- 11 -->
+    <div class="job-card"
+         data-title="Customer Support Executive"
+         data-location="Mumbai, India"
+         data-type="Full-time"
+         onclick="openJob('Customer Support Executive')">
+      <h3>Customer Support Executive</h3>
+      <p>Assist customers via chat, phone, and email to resolve product-related queries efficiently.</p>
+      <span class="location">Mumbai, India</span>
+    </div>
+
+  </div>
+
+
+
+  <div id="jobModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeJob()">&times;</span>
+    <h2 id="jobTitle"></h2>
+    <p id="jobDesc">Detailed description of the job...</p>
+    <button class="btn" onclick="scrollToForm()">Apply Now</button>
+  </div>
+</div>
+
+</section>
+
+<!-- application form -->
+ <section id="apply" class="apply" data-aos="fade-up">
+  <h2>Apply Now</h2>
+  <form id="applyForm" onsubmit="return validateForm()">
+    <input type="text" id="name" placeholder="Full Name" required>
+    <input type="email" id="email" placeholder="Email" required>
+    <input type="file" id="resume" required>
+    <textarea id="message" placeholder="Why do you want to join us?" required></textarea>
+    <button type="submit" class="btn">Submit Application</button>
+    <p id="formMessage"></p>
+  </form>
+</section>
+
+<!-- footer section -->
+ <section class="cta">
+  <h2>Ready to Join Our Team?</h2>
+  <a href="#apply" class="btn">Apply Today</a>
+</section>
+
+<footer>
+  <p>© 2025 YourCompany | <a href="mailto:info@yourcompany.com">Contact Us</a></p>
+  <div class="social">
+    <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="#"><i class="fab fa-google"></i></a>
+  </div>
+</footer>
+<!-- javascript link -->
+<script src="script.js"></script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({ duration: 1000, once: true });
+</script>
+
+</body>
+</html>
